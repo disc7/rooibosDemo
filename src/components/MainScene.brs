@@ -3,8 +3,4 @@ sub init()
     resolutionName = LCase(createObject("roDeviceInfo").getUIResolution().name)
     backgroundImage = m.top.findNode("backgroundImage")
     backgroundImage.uri = backgroundImage.uri.replace("{size}", resolutionName)
-
-    modelObj = SomeModel()
-    keyName = modelObj.getKeyName()
-    ?""
 end sub

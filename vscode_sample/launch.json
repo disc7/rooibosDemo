@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+		{
+			"name": "Unit Tests",
+			"type": "brightscript",
+			"request": "launch",
+			"consoleOutput": "full",
+			"internalConsoleOptions": "neverOpen",
+			"preLaunchTask": "build:tests",
+			"envFile": "${workspaceFolder}/.env",
+			"host": "${env:ROKU_HOST}",
+			"password": "${env:ROKU_PWD}",
+			"retainStagingFolder": true,
+			"stopOnEntry": false,
+			"files": [
+			  "!**/images/*.*",
+			  "!**/fonts/*.*",
+			  "!*.jpg",
+			  "!*.png",
+			  "*",
+			  "*.*",
+			  "**/*.*",
+			  "!*.zip",
+			  "!**/*.zip"
+			],
+			"rootDir": "${workspaceFolder}/out/tests",
+			"sourceDirs": ["${workspaceFolder}/tests"],
+			"enableDebuggerAutoRecovery": true,
+			"stopDebuggerOnAppExit": true,
+			"enableVariablesPanel": false,
+			"injectRaleTrackerTask": false,
+			"enableDebugProtocol": false
+		}
+    ]
+}

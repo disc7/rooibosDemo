@@ -2,12 +2,12 @@ function SomeModel() as object
     if (m._someModel = invalid)
 
         obj = {}
-        obj.nodeRef = invalid
+        obj.appTitle = ""
 
-        obj.getKeyName = function() as boolean
-            config = { "arg": true }
-            return getConfigKeyName(config)
-        end function
+        obj.globalMockExample = sub()
+            appTitle = getManifestValue("title")
+            m.appTitle = appTitle
+        end sub
 
         m._someModel = obj
     end if

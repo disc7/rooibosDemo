@@ -1,5 +1,3 @@
-function getConfigKeyName(config as object) as boolean
-    if (config <> invalid)
-        return config.keys()
-    end if
+function getManifestValue(key as string) as string
+    return createObject("roAppInfo").getValue(key)
 end function
