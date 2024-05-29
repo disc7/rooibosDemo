@@ -1,0 +1,7 @@
+#Visual Studio Code
+.vscode
+out/
+
+#npm
+/node_modules
+*.env

@@ -1,0 +1,12 @@
+{
+	"rootDir": "src",
+	"sourceMap": true,
+	"files": [
+		"manifest",
+		"source/*.*",
+		"source/**/*.*",
+		"components/**/*.*"
+	],
+	"diagnosticFilters": [
+	]
+}

@@ -1,0 +1,32 @@
+{
+    "rootDir": "./",
+    "files": [
+      "manifest",
+      "source/*.*",
+      "source/**/*.*",
+      {
+          "src": "../src/source/**/*",
+          "dest": "./source/"
+      },
+      "!../src/source/main.brs"
+    ],
+    "autoImportComponentScript": true,
+    "createPackage": false,
+    "stagingDir": "out/tests",
+    "plugins": [
+      "rooibos-roku"
+    ],
+    "rooibos": {
+      "isRecordingCodeCoverage": false,
+      "printTestTimes": true,
+      "testsFilePattern": null,
+      "tags": ["!integration", "!deprecated", "!fixme"],
+      "showOnlyFailures": true,
+      "catchCrashes": true,
+      "lineWidth": 70,
+      "failFast": false,
+      "logLevel": 4,
+      "sendHomeOnFinish": false
+    },
+    "sourceMap": true
+  }

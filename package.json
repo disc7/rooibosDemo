@@ -1,0 +1,17 @@
+{
+  "name": "rooibos-demo",
+  "version": "1.0.0",
+  "description": "Simple Rooibos demo",
+  "dependencies": {
+    "brighterscript": "^0.65.8",
+    "rooibos-roku": "^5.12.0"
+  },
+  "scripts": {
+    "build:tests": "npx bsc --project ./tests/bsconfig.json"
+  },
+  "ropm": {
+    "rootDir": "src"
+  },
+  "author": "disc7",
+  "license": "private"
+}

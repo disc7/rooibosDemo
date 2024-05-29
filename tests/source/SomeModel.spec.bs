@@ -1,0 +1,18 @@
+namespace tests
+	@suite
+	class NavigationModelTests extends tests.BaseTestSuite
+
+		protected override function setUp()
+			super.setUp()
+
+			m.SUT = SomeModel()
+		end function
+
+		'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		@describe("Tests for SomeModel public methods")
+		'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+	end class
+end namespace
