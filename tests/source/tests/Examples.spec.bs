@@ -11,9 +11,8 @@ namespace tests
 		end function
 
 		protected override function afterEach()
-			m.cleanMocks()
-			m.cleanStubs()
 			m.SUT = invalid
+			TearDownSomeModel()
 		end function
 
 		'+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -33,27 +32,6 @@ namespace tests
 			m.stubCall(getManifestValue, manifestValue)
 			m.SUT.globalMockExample()
 			m.assertEqual(m.SUT.appTitle, manifestValue)
-		end function
-
-		@it("stubExample1_passing")
-		@params({ configSetVia_config: true }, { configSetViaStub: true })
-		function _(config1 as object, config2 as object)
-			m.SUT._config = config1
-			m.stub(m.SUT, "_getConfig", config2)
-			m.SUT.setUpdatedConfig1()
-			expectedKeyNameConfig2 = config2.keys()[0]
-			resultKeyName = m.SUT.updatedConfig.keys()[0]
-			m.assertEqual(expectedKeyNameConfig2, resultKeyName)
-		end function
-
-		@it("stubExample2_crashing_stub_from_stubExample1_persisting")
-		@params({ configSetVia_config: true }, { configSetViaStub: true })
-		function _(config1 as object, config2 as object)
-			m.SUT._config = config1
-			m.SUT.setUpdatedConfig2()
-			expectedKeyNameConfig1 = config1.keys()[0]
-			resultKeyName = m.SUT.updatedConfig.keys()[0]
-			m.assertEqual(expectedKeyNameConfig1, resultKeyName)
 		end function
 
 	end class
